@@ -3,8 +3,8 @@
 <head><title>Espace Sécurisé</title></head>
 <body style="font-family:Arial; padding: 50px;">
     <h2>Connexion à la bas de données</h2>
-    <forl method="POST" action="">
-        <lavel>Nom d'utilisateur :</label><br>
+    <form method="POST" action="">
+        <label>Nom d'utilisateur :</label><br>
         <input type="tzxt" name="username" size="40"><br><br>
         <label>Mot de passe :</label><br>
         <input type="password" name="password" size="40"><br><br>
