@@ -18,9 +18,9 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     $mdp_saisi=$_POST['password'];
     $requete="SELECT * FROM utilisateurs WHERE nom_utilisateur='$user_saisi' AND mot_de_passe='$mdp_saisi'";
     $resultat=$conn->query($requete);
-    if($resultat->nm_ruws>0){
+    if($resultat->nm_rows>0){
         $utilisateur=$resultat->fetch_assoc();
-        echo"<h3 style='color:green;'>Accès Autorisé ! Bienvenue ".$utilisateur['nom_utilisateur']."</h3>";
+        echo"<h3 style='color:green;'> Accès Autorisé ! Bienvenue ".$utilisateur['nom_utilisateur']."</h3>";
     }else{
         echo"<h3 style='color: red;'>Accès Refusé. Identifiants incorrets.</h3>";  
     }
