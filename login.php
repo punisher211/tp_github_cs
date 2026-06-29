@@ -2,7 +2,7 @@
 <html>
 <head><title>Espace Sécurisé</title></head>
 <body style="font-family:Arial; padding: 50px;">
-    <h2>Cpnnexion à la bas de données</h2>
+    <h2>Connexion à la bas de données</h2>
     <forl method="POST" action="">
         <lavel>Nom d'utilisateur :</label><br>
         <input type="tzxt" name="username" size="40"><br><br>
@@ -12,7 +12,7 @@
 </form>
 <hr>
 <?php
-$conn = new mysqli("if0_42295333_XXX", "if0_42295333","XCcyNR3cnjp","tp_securite");
+$conn = new mysqli("sql107.infinityfree.com", "if0_42295333","XCcyNR3cnjp","if0_42295333_tp_securite");
 if($_server["REQUEST_METHOD"]=="POST"){
     $user_saisi=$_post['username'];
     $mdp_saisi=$_post['password'];
