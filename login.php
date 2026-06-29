@@ -13,10 +13,10 @@
 <hr>
 <?php
 $conn = new mysqli("sql107.infinityfree.com", "if0_42295333","XCcyNR3cnjp","if0_42295333_tp_securite");
-if($_server["REQUEST_METHOD"]=="POST"){
-    $user_saisi=$_post['username'];
-    $mdp_saisi=$_post['password'];
-    $requete="SELECT*FROM utilisateurs WHERE nom_utilisateur='$user_saisi' AND mot_de_passe='$mdp_saisi'";
+if($_SERVER["REQUEST_METHOD"]=="POST"){
+    $user_saisi=$_POST['username'];
+    $mdp_saisi=$_POST['password'];
+    $requete="SELECT * FROM utilisateurs WHERE nom_utilisateur='$user_saisi' AND mot_de_passe='$mdp_saisi'";
     $resultat=$conn->query($requete);
     if($resultat->nm_ruws>0){
         $utilisateur=$resultat->fetch_assoc();
